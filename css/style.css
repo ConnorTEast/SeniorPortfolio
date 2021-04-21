@@ -27,6 +27,7 @@ nav{
   transition: .5s;
   display:block;
   font-family: 'Raleway', sans-serif;
+	z-index: 1;
 }
 nav a{
     text-decoration: none;
@@ -220,12 +221,12 @@ footer>h3:hover{
   display: none;
   position: absolute;
   left:1px;
+	z-index: 2;
 
 }
 .Logo1>img{
   width:70px;
     position: fixed;
-      z-index: 1;
 }
 .trapezoid1 {
   border-bottom: 50px solid grey;
@@ -264,6 +265,16 @@ font-size: 3em;
   margin:0 auto;
   box-shadow: 5px 5px 10px black;
   transition: .4s;
+	filter: grayscale(20%);
+	filter: brightness(.8);
+
+}
+.AboutMeImage:hover{
+	transition:.6s;
+border-radius: 50%;
+filter: brightness(.9);
+filter: grayscale(0%);
+
 }
 .Aboutme>p{
   margin-top:30px;
@@ -271,6 +282,7 @@ font-size: 3em;
   grid-row:3;
   text-align: justify;
 }
+
 /*things related to resume page */
 .ResumePageContent{
   height:2500px;
@@ -417,6 +429,9 @@ height: 80%;
 .MyFutureGreyMain{
 	height:800px;
 	background-color: grey;
+	display: grid;
+	grid-template-columns:1fr 2fr 1fr ;
+	grid-template-rows:1fr 1fr 1fr;
 }
 .TopOfFuture{
   height:800px;
@@ -433,16 +448,39 @@ height: 80%;
   border-right: 60px solid transparent;
   width: 100%;
 }
-
-
+.MyFutureGreyMain>h2{
+grid-column:2/3 ;
+grid-row:1 ;
+display:flex;
+align-items: center;
+justify-content: center;
+}
+.MyFutureGreyMain>embed{
+grid-column:2/3 ;
+grid-row:2/3 ;
+}
 
 /*Community Service */
 .CommunityServiceMain{
 	height:1200px;
 	background-color: grey;
+	display:grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr 2fr 1fr;
 }
-
-
+.reflection{
+	grid-row: 2;
+	grid-column: 2/3;
+}
+.center{
+	grid-row: 1;
+	grid-column:1/4;
+	display:flex;
+	justify-content: center;
+  align-items: center;
+	font-family: 'Raleway', sans-serif;
+}
+/*future*/
 
 /*at media*/
 @media only screen and (max-width: 893px){
